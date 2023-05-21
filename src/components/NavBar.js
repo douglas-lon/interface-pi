@@ -23,13 +23,6 @@ export const NavBar = () => {
                     '&:hover': {
                         backgroundColor: 'rgb(80, 80, 80)',
                       }}}> Dashboard </Button>
-
-                    <Button sx={{color:'white', 
-                    display:'block', 
-                    fontSize:'1em',
-                    '&:hover': {
-                        backgroundColor: 'rgb(80, 80, 80)',
-                      }}}> Classificar </Button>
                 </Box>
             </AppBar>
         </Box>

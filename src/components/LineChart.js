@@ -2,35 +2,31 @@ import React, { useState } from 'react';
 import { Box, FormControl, InputLabel, MenuItem, Select } from '@mui/material'
 import Plot from 'react-plotly.js';
 
-var trace1 = {
-    x: [1, 2, 3, 4],
-    y: [10, 15, 13, 17],
-    type: 'scatter'
-  };
-  
-  var trace2 = {
-    x: [1, 2, 3, 4],
-    y: [16, 5, 11, 9],
-    type: 'scatter'
-  };
 
-const situacao = ['Ativo','Transferido','Abandonou',]
+const situacao = [0,1,2,3,4,5,6,7,8,9,10]
 
-let ano2017 = {
+let ano2019 = {
     x: [...situacao],
-    y: [1194, 142, 55],
-    name: '2017'
+    y: [88, 12, 91, 94, 94, 81, 128, 89, 89, 126, 107],
+    name: '2019'
 }
 
-let ano2018 = {
+let ano2020 = {
     x: [...situacao],
-    y: [1000, 190, 70],
-    name:'2018'
+    y: [107, 13, 94, 88, 76, 86, 104, 115, 74, 136, 107],
+    name:'2020'
+}
+
+let ano2021 = {
+    x: [...situacao],
+    y: [79, 10, 89, 103, 93, 87, 123, 102, 72, 127, 115],
+    name:'2021'
 }
 
 const data = [
-    ano2017,
-    ano2018
+    ano2019,
+    ano2020,
+    ano2021
 ]
 
 
@@ -60,7 +56,7 @@ const LineChart = () => {
                 <Plot
                 data={data}
                 style={style}
-                layout={{title:'Media por ano'}}
+                layout={{title:'Quantidade de notas', xaxis:{'type': 'category'}}}
                 useResizeHandler={true}
                 />
 

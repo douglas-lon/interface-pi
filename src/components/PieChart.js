@@ -9,26 +9,26 @@ let rawData=[{
   }]
 
 let dataByYear = {
-    2017: [{
-        values: [67, 23, 10],
-        labels: ['Aprovados', 'Reprovados', 'Pendentes'],
-        type: 'pie'
-      }],
-    2018: [{
-        values: [70, 20, 10],
-        labels: ['Aprovados', 'Reprovados', 'Pendentes'],
-        type: 'pie'
-      }],
     2019: [{
-        values: [73, 20, 7],
-        labels: ['Aprovados', 'Reprovados', 'Pendentes'],
+        values: [529, 380, 81],
+        labels: ['Aprovados', 'Reforço', 'Aprovado parcialmente'],
+        type: 'pie'
+      }],
+    2020: [{
+        values: [536, 378, 86],
+        labels: ['Aprovados', 'Reforço', 'Aprovado parcialmente'],
+        type: 'pie'
+      }],
+    2021: [{
+        values: [550, 374, 87],
+        labels: ['Aprovados', 'Reforço', 'Aprovado parcialmente'],
         type: 'pie'
       }]
 } 
 
 const PieChart = () => {
-    const [data, setData] = useState([...dataByYear['2017']])
-    const [layout, setLayout] = useState({title: `Rendimento por Ano: ${2017}`})
+    const [data, setData] = useState([...dataByYear['2019']])
+    const [layout, setLayout] = useState({title: `Rendimento por Ano: ${2019}`})
     const style={height: '100%', width: '100%'}
 
     const items = []

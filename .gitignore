@@ -5,6 +5,10 @@
 /.pnp
 .pnp.js
 
+# Directories
+DA/
+model-algorithm-KNN/
+
 # testing
 /coverage
 

@@ -9,26 +9,36 @@ let rawData=[{
   }]
 
 let dataByYear = {
-    2019: [{
-        values: [529, 380, 81],
+    A: [{
+        values: [600, 20, 380],
         labels: ['Aprovados', 'Reforço', 'Aprovado parcialmente'],
         type: 'pie'
       }],
-    2020: [{
-        values: [536, 378, 86],
+    B: [{
+        values: [543, 42, 415],
         labels: ['Aprovados', 'Reforço', 'Aprovado parcialmente'],
         type: 'pie'
       }],
-    2021: [{
-        values: [550, 374, 87],
+    C: [{
+        values: [513, 58, 429],
         labels: ['Aprovados', 'Reforço', 'Aprovado parcialmente'],
         type: 'pie'
-      }]
+      }],
+    D: [{
+        values: [497, 80, 423],
+        labels: ['Aprovados', 'Reforço', 'Aprovado parcialmente'],
+        type: 'pie'
+      }],
+    E: [{
+        values: [483, 98, 419],
+        labels: ['Aprovados', 'Reforço', 'Aprovado parcialmente'],
+        type: 'pie'
+    }],
 } 
 
 const PieChart = () => {
-    const [data, setData] = useState([...dataByYear['2019']])
-    const [layout, setLayout] = useState({title: `Rendimento por Ano: ${2019}`})
+    const [data, setData] = useState([...dataByYear['A']])
+    const [layout, setLayout] = useState({title: `Aprovação por Classe Econômica: ${'A'}`})
     const style={height: '100%', width: '100%'}
 
     const items = []
@@ -45,7 +55,7 @@ const PieChart = () => {
 
     const handleSelectChange = (value) => {
         setData([...dataByYear[value]])
-        setLayout({title: `Rendimento por Ano: ${value}`})
+        setLayout({title: `Aprovação por Classe Econômica: ${value}`})
     }
 
     addItems()

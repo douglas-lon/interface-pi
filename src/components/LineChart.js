@@ -56,7 +56,7 @@ const LineChart = () => {
                 <Plot
                 data={data}
                 style={style}
-                layout={{title:'Quantidade de notas', xaxis:{'type': 'category'}}}
+                layout={{title:'Nivel das notas', xaxis:{'type': 'category'}}}
                 useResizeHandler={true}
                 />
 

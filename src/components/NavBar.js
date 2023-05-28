@@ -10,12 +10,6 @@ export const NavBar = () => {
                     gap:2,
                     minHeight:'4em',
                 }} >
-                    <Button sx={{color:'white', 
-                    display:'block', 
-                    fontSize:'1em',
-                    '&:hover': {
-                        backgroundColor: 'rgb(80, 80, 80)',
-                      }}}> Home </Button>
 
                     <Button sx={{color:'white', 
                     display:'block', 

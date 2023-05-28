@@ -3,6 +3,7 @@ import PieChart from '../../components/PieChart'
 import {BarPlot} from '../../components/BarPlot'
 import CardWithFilter from '../../components/CardWithFilter'
 import LineChart from '../../components/LineChart'
+import {BarPlotMedia} from '../../components/BarPlotMedia'
 
 const DashboardRendimento = () => {
 
@@ -26,6 +27,10 @@ const DashboardRendimento = () => {
             <Box display={'flex'} gap={10} justifyContent={'center'}>
                 <PieChart/>
                 <LineChart/>
+            </Box>
+
+            <Box display={'flex'} justifyContent={'center'}>
+                <BarPlotMedia/>
             </Box>
             
         </Container>

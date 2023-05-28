@@ -7,12 +7,8 @@ import { FormControl, InputLabel, MenuItem, Select } from '@mui/material';
 
 
 let dummyData = {
-    2017: 123487,
-    2018: 132265,
-    2019: 144378,
-    2020: 112815,
-    2021: 127394,
-    2022: 147246,
+    Masculino: 79,
+    Feminino: 81,
 }
 
 export default function CardWithFilter() {
@@ -31,23 +27,23 @@ export default function CardWithFilter() {
     }
 
     return (
-      <Card  sx={{ boxShadow: '10', maxWidth: 600, maxHeight:500, position:'relative', paddingTop:'15px'}}>
+      <Card  sx={{ boxShadow: '10', minWidth: 300, width:590,maxWidth: 600, maxHeight:500, position:'relative', paddingTop:'15px'}}>
         <CardActions sx={{justifyContent:'center'}}>
             <FormControl  sx={{ m: 1, width:'100%'}}>
-                <InputLabel id="demo-simple-select-helper-label">Matrículas por Ano:</InputLabel>
+                <InputLabel id="demo-simple-select-helper-label">Frequência por Género:</InputLabel>
                 <Select
                 labelId="demo-simple-select-helper-label"
                 id="demo-simple-select-helper"
-                label="Matrículas por Ano:"
+                label="Frequência por Género:"
                 defaultValue={dummyData}
-                onChange={(e) => { setCardValue(e.target.value)}}
+                onChange={(e) => { setCardValue(`${e.target.value}%`)}}
                 >   
                     {addItems()}
                     {items}
                 </Select>
             </FormControl>
         </CardActions>
-        <CardContent>
+        <CardContent width={'100%'}>
             <Typography fontWeight={'bold'} fontSize={'8.3vw'} lineHeight={''} textAlign={'center'} variant="h2" component="h2">
                 {cardValue}
             </Typography>

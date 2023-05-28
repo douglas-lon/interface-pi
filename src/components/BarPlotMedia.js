@@ -2,26 +2,26 @@ import { Box } from '@mui/material'
 import React from 'react'
 import { FilterBarPlot } from './BarFilter'
 
-let xOut = ['A','B','C', 'D', 'E']
-let yOut = [7, 5.65,5.62, 5.51, 5.62, 5]
+let xOut = [2019,2020,2021]
+let yOut = [77.5,70.6,81.7]
 
 let dataY = [
   {type: 'bar', x: xOut, y: yOut,  text: yOut.map(String),
-  textposition: 'auto'}
+  textposition: 'auto', marker: {color: 'lightblue'}},
+  
 ]
 
-let layout= {title: 'Média Das Notas Por Classe Econômica', xaxis:{'type': 'category'}} 
+let layout= {title: 'Frequência por Ano', xaxis:{'type': 'category'}} 
 let style={width: '100%', height: '100%'}
 
-export const BarPlot = () => (
+export const BarPlotMedia = () => (
     <Box sx={{
       overflow:'hidden',
       borderRadius:2,
       bgcolor:'blue',
-      minWidth:'50vw',
-      maxWidth:'40vw',
-      minHeight: '50vh',
-      maxHeight: '50vh',
+      width: '90%',
+      minHeight: '60vh',
+      maxHeight: '80vh',
       boxShadow: '10'
     }} >
       
